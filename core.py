@@ -1,7 +1,7 @@
 import pygame as pg
 import player
 import animation
-import zipfile
+
 
 width , height = 1024 , 600
 display = pg.display.set_mode((width , height))
@@ -41,7 +41,9 @@ while loop == True:
 
     #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     player.p1.update(window , keyinput)
+    player.p2.update(window , keyinput)
 
-    animation.sasuke.update_p1(pg, window , keyinput)
+    animation.sasuke_p1.update_p1(pg, window , keyinput)
+    animation.sasuke_p2.update_p2(pg, window , keyinput)
 
     event_handler()
