@@ -19,6 +19,10 @@ class player_1():
         self.left = False
         self.jump = False
 
+        #SKILL +++++++++++++++++
+        self.dash = False
+        self.dashcount = 0
+
     def update(self,window,keyinput):
         collider = pg.draw.rect(window ,(255,0,0), (self.x ,self.y, 30,45),1)
 
@@ -49,8 +53,16 @@ class player_1():
                 self.vel_y = 10
                 self.y = 300
 
-    def sasuke_skill_p1():
-        pass
+# BORDER
+        if self.x < 0:
+            self.x = 0
+        if self.x > 650:
+            self.x = 650
+
+
+    def sasuke_skill_p1(self,keyinput):
+        if keyinput[pg.K_r]:
+            pass
 
 
 p1 = player_1()
@@ -64,7 +76,7 @@ class player_2():
         self.sasuke = True
         self.naruto = False
 
-        self.x = 600
+        self.x = 650
         self.y = 300
         self.vel_x = 5
         self.vel_y = 10
@@ -104,6 +116,13 @@ class player_2():
                 self.jump = False
                 self.vel_y = 10
                 self.y = 300
+
+# BORDER
+        if self.x < 0:
+            self.x = 0
+        if self.x > 650:
+            self.x = 650
+
 
     def sasuke_skill_p2():
         pass

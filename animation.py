@@ -26,6 +26,7 @@ class sasukeAnimP1():
 
 #PLAYER 1 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
     def update_p1(self,pg,window , keyinput):
 
         if player.p1.sasuke == True:
@@ -90,6 +91,7 @@ class sasukeAnimP1():
                 self.idlecount = 0
                 self.idlecountleft = 0
 
+
         #IDLE ANIM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             
@@ -110,10 +112,11 @@ class sasukeAnimP1():
                     self.idleanimlistleft.append(idleframeleft)
 
                     if player.p1.jump == False:
-                        window.blit(self.idleanimlistleft[int(self.idlecountleft)],(self.x - 14, self.y))
+                        window.blit(self.idleanimlistleft[int(self.idlecountleft)],(self.x - 20, self.y))
 
             self.idlecount += 0.2
             self.idlecountleft += 0.2
+
 
         #JUMP AND FALL ANIM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -245,7 +248,7 @@ class sasukeAnimP2():
                 self.idlecountleft = 0
 
         #IDLE ANIM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+            
             
             if player.p2.right == True and keyinput[pg.K_a] == False and keyinput[pg.K_d] == False:
                 for num in range(1,5):
@@ -264,13 +267,12 @@ class sasukeAnimP2():
                     self.idleanimlistleft.append(idleframeleft)
 
                     if player.p2.jump == False:
-                        window.blit(self.idleanimlistleft[int(self.idlecountleft)],(self.x - 14, self.y))
+                        window.blit(self.idleanimlistleft[int(self.idlecountleft)],(self.x - 20, self.y))
 
             self.idlecount += 0.2
             self.idlecountleft += 0.2
 
         #JUMP AND FALL ANIM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
             if player.p2.vel_y < 9 and player.p2.right == True and player.p2.left == False:
                 for num in range(1,5):
@@ -304,5 +306,6 @@ class sasukeAnimP2():
             if player.p2.vel_y == 10:
                 self.jumpcount = 0
                 self.jumpcountleft = 0
+
 
 sasuke_p2 = sasukeAnimP2()
