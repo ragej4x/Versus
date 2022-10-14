@@ -19,6 +19,8 @@ class player_1():
         self.left = False
         self.jump = False
 
+        self.chakra = 200
+
         #SKILL +++++++++++++++++
         self.dash = False
         self.dashcount = 0
@@ -36,6 +38,10 @@ class player_1():
             self.x -= self.vel_x
             self.right = False
             self.left = True
+
+        if keyinput[pg.K_LEFT] and keyinput[pg.K_RIGHT]:
+            self.left = False
+            self.right = True
 
         if keyinput[pg.K_UP]:
             self.jump = True
@@ -59,10 +65,12 @@ class player_1():
         if self.x > 650:
             self.x = 650
 
-
+        
     def sasuke_skill_p1(self,keyinput):
-        if keyinput[pg.K_r]:
-            pass
+
+
+        pass
+
 
 
 p1 = player_1()
@@ -100,6 +108,11 @@ class player_2():
             self.x -= self.vel_x
             self.right = False
             self.left = True
+
+        if keyinput[pg.K_a] and keyinput[pg.K_d]:
+            self.left = False
+            self.right = True
+
 
         if keyinput[pg.K_w]:
             self.jump = True

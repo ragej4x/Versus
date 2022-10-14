@@ -259,6 +259,7 @@ class sasukeAnimP2():
                     if player.p2.jump == False:
                         window.blit(self.idleanimlist[int(self.idlecount)] , (self.x ,self.y))                    
 
+
             if player.p2.left == True and keyinput[pg.K_a] == False and keyinput[pg.K_d] == False:
                 for num in range(1,5):
                     idleframeleft = pg.image.load(f"data/bin/sasuke/idle{num}.anim")
@@ -306,6 +307,8 @@ class sasukeAnimP2():
             if player.p2.vel_y == 10:
                 self.jumpcount = 0
                 self.jumpcountleft = 0
+
+
 
 
 sasuke_p2 = sasukeAnimP2()
